@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav" style="display: flex;justify-content: space-between;">
+            <div>
+                <h2 style="font-family: Arial, Helvetica, sans-serif ;margin-left: 20px;">FRANCESCO GIOIA</h2>
+            </div>
+            <div
+                style="display:flex;gap: 36px; font-family: Arial, Helvetica, sans-serif;font-weight: 100;margin-right: 20px;">
+                <h2>INSTAGRAM</h2>
+                <h2>GALLERY</h2>
+                <h2>CONTACT</h2>
+            </div>
+        </div>
+
+        <div id="section1" style="width: 50%; margin-left: 26%;line-height: 40px;margin-top: 10%;">
+            <h1 style="font-size: 100px;font-weight: 400;position: relative;z-index: 9;">HELLO I'M</h1>
+            <h1  style="font-size: 100px;font-weight: 400;text-align: center;position: relative;z-index: 9;">FRANCESO</h1>
+            <h1  style="font-size: 100px;font-weight: 400;text-align: center;position: relative;z-index: 9;">GIOIA</h1>
+        </div>
+        <div  id="section2">
+            <img style="width: 190px;height: 260px; margin-top: -32%;position: absolute;margin-left: 42%;rotate: 12deg;" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687" alt="">
+            <img style="width: 190px;height: 260px; margin-top: -32%;position: absolute;margin-left: 42%;rotate: 8deg;" src="https://images.unsplash.com/photo-1562572159-4efc207f5aff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735" alt="">
+            <img style="width: 190px;height: 260px; margin-top: -32%;position: absolute;margin-left: 42%;" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" alt="">
+       
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var v=gsap.timeline()
+        v.from("#nav h2", {
+            y: -50,
+            opacity: 0,
+            delay: 0.4,
+            duration:0.8,
+            stagger:0.1
+
+        })
+        v.from("#section1 h1",{
+            x:-1000,
+            stagger:0.2,
+            duration:0.9,
+            opacity:0
+
+        })
+        v.from("#section2 img",{
+            scale:0,
+            duration:0.8,
+            stagger:0.2
+
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>
