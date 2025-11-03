@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #page1{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(247, 213, 170);
+
+        }
+         #page2{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(246, 250, 215);
+            
+        }
+         #page3{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(106, 94, 79);
+            
+        }
+        #page2 img{
+            height: 100%;
+            width: 10%;
+            object-fit: cover;
+            position: relative;
+            left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1">
+
+    </div>
+    <div id="page2">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171" alt="">
+
+    </div>
+    <div id="page3">
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        gsap.to("#page2 img",{
+            width:"100%",
+            left:"0%",
+            
+            scrollTrigger:{
+                trigger:"#page2",
+                scroller:"body",
+                scrub:2,
+                pin:true,
+                start:"top 0",
+                end:"top -100%"
+
+            }
+
+
+        })
+    </script>
+        
+        
+    
+</body>
+</html>
